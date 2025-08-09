@@ -16,11 +16,9 @@
     "CatalizCS",
     "Disme-Bot",
     "usePrefix",
-    "D-Jukie",
-    "Yan Maglinte"
+    "D-Jukie"
   ],
   "license": "GPL-3.0",
-  "author": "Yan Maglinte",
   "dependencies": {
     "@distube/ytdl-core": "^4.16.12",
     "aes-js": "^3.1.2",
