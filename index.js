@@ -142,12 +142,19 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "includes/cover/index.html"));
 });
 
-app.listen(2024, () => {
+// Health check endpoint for UptimeRobot
+app.get("/ping", function (req, res) {
+  res.status(200).json({
+    status: "alive",
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    message: "Bot is running successfully!"
+  });
+});
+
+app.listen(2024, "0.0.0.0", () => {
   global.loading.log(
     `Bot is running on port: 2024`,
     "SYSTEM",
   );
 });
-
-// __@YanMaglinte was Here__ //
-// ----------------------------//
